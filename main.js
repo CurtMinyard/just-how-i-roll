@@ -32,7 +32,7 @@ const sortByNumber = function(arr) {
 const d6Image = document.querySelector("#d6-roll");
 d6Image.src = 'images/start/d6.png';
 const random  = 6;
-d6Image.src = `images/d6/${ramdom}.png`;
+d6Image.src = `images/d6/${random}.png`;
 
 /*******************
  * EVENT LISTENERS *
