@@ -2,11 +2,11 @@
  * DATA *
  **********/
 
-const sixes = [];
-const doubleSixes = [];
-const twelves = [];
-const twenties = [];
-
+const sixes = document.querySelector("#d6-roll");
+const doubleSixes = document.querySelectorAll(".double.d6.roll");
+const twelves = document.querySelector("#d12-roll");
+const twenties = document.querySelector("#d20-roll");
+const resetButton = document.querySelector ("#reset-button");
 /********************
  * HELPER FUNCTIONS *
 ********************/
@@ -29,12 +29,19 @@ const sortByNumber = function(arr) {
 /*******************
  * YOUR CODE BELOW *
  *******************/
-
-
+const d6Image = document.querySelector("#d6-roll");
+d6Image.src = 'images/start/d6.png';
+const random  = 6;
+d6Image.src = `images/d6/${ramdom}.png`;
 
 /*******************
  * EVENT LISTENERS *
  *******************/
+sixes.addEventListener("click", rollSixSidedDie);
+doubleSixes.addEventListener("click", rollDoubleSixSidedDice);
+twelves.addEventListener("click", rollTwelveSidedDice );
+twenties.addEventListener("click", rollTwentySidedDice);
+resetButton.addEventListener("click", resetApp);
 
 
 
